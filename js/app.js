@@ -24,7 +24,7 @@
   // ===========================
   q("calculateBtn").addEventListener("click", () => {
     // Show popup ad (placeholder)
-    q("popupAd").style.display = "flex";
+    //q("popupAd").style.display = "flex";
 
     // ---------------------------
     // Input values
@@ -144,9 +144,9 @@
   // ===========================
   // Popup & Reset
   // ===========================
-  q("closePopup").addEventListener("click", () => {
-    q("popupAd").style.display = "none";
-  });
+  //q("closePopup").addEventListener("click", () => {
+   /// q("popupAd").style.display = "none";
+  //});
 
   q("resetBtn").addEventListener("click", () => {
     q("pensionForm").reset();
@@ -156,7 +156,7 @@
   // ===========================
   // Jobs Link
   // ===========================
-  q("openJobs") &&
+ /*q("openJobs") &&
     q("openJobs").addEventListener("click", () => {
       const state = q("stateSelect").value;
       if (!state) {
@@ -167,5 +167,5 @@
         "https://www.freejobalert.com/state-government-jobs/?s=" +
         encodeURIComponent(state);
       window.open(url, "_blank");
-    });
+    });*/
 })();

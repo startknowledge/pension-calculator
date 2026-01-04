@@ -6,144 +6,229 @@
   --muted:#6b7280;
   --bg:#f7fbff;
   --card:#ffffff;
-  font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
+  font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
 }
-body{margin:0;background:var(--bg);color:#0b1726;padding:18px}
-
-.topbar{max-width:980px;margin:0 auto;padding:12px}
-
-.container{max-width:980px;margin:12px auto;background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 20px rgba(12,25,52,0.06);overflow: hidden;} /* prevent visual overflow */
-
-h1{font-size:25px;margin:0;text-transform:uppercase;color:var(--olive); text-align: center;}
-
-.subtitle{font-size:12px;color:var(--muted);margin-bottom:18px;text-align: center}
-
-.form{display:flex;flex-direction:column;gap:6px}
-
-label{font-size:21px}
-
-input,select{width:40%;padding:10px;border-radius:8px;border:1px solid #e6eefc;font-size:20px}
-
-.controls{display:flex;gap:28px;margin-top:10px}
-
-.btn{background:var(--navy);color:#fff;padding:10px;border-radius:8px;border:none;cursor:pointer; font-size:30px;transition:background 0.3s}
-.btn.secondary{background:var(--muted)}
-
-.image-area{margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-
-.image-box{width:360px;height:75px;border:1px dashed #cfe3ff;border-radius:1px;overflow:hidden, right 0; top 0;}
-
-.image-box img{width:100%;height:100%;object-fit:cover}
-
-.ad-slot{background:#f1f5f9;border:1px dashed #cbd5e1;padding:8px;border-radius:6px;text-align:center;color:#475569;margin-top:10px}
-
-.ad-row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
-
-.results{margin-top:12px;border-radius:8px;padding:10px;background:#fff;border:1px solid #e6f0ff}
-
-table{width:100%;border-collapse:collapse}
-
-th,td{padding:8px;border-bottom:1px solid #eef4ff;text-align:left}
-
-.factor-wrap{max-height:200px;overflow:auto;border:1px solid #eef4ff;padding:8px;border-radius:6px;background:#fff}
-
-.small{font-size:12px;color:var(--muted)}
-
-.note-row{display:flex;justify-content:space-between; font-size: 13px;}
-.highlight{font-weight:700;color:var(--air)}
-
-.red-arrow{color:red;font-size:18px;margin-left:6px}
-
-.footer-note{font-size:12px;color:var(--muted);margin-top:12px;max-width:980px;margin-left:auto;margin-right:auto}
-
-.popup-ad{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);z-index:9999}
-
-.popup-inner{background:#fff;padding:16px;border-radius:8px;max-width:420px;width:90%}
-/*
-@media(max-width:640px){
-  .image-box{width:100%;height:160px}
-  .note-row{flex-direction:le;gap:6px}
-}*/
-/* ------------- Form + Image Row Layout ------------- */
-/* row: form left, image right */
+body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--olive);
+  line-height:1.6;
+  font-size:18px;
+}
+/* ---------------- Top Bar ---------------- */
+.topbar{
+  max-width:100%;
+  margin:0 auto;
+  padding:12px;
+  background:var(--navy);
+  color:#fff;
+  text-align:center;
+  font-size:22px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:1.2px;
+}
+/* ---------------- Container ---------------- */
+.container{
+    display: flex;
+  flex-direction: column;
+  max-width:100%;   /* /* ya 1300px */ */
+  margin:20px auto;
+  padding:20px;
+  justify-content:center;  
+}
+/* -------- Form + Image Row Layout -------- */
 .form-image-row{
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;   /* align top edges */
-  justify-content: space-between;
-  margin-top: 12px;
-  flex-wrap: nowrap;         /* don't wrap unless small screen */
+  display:flex;
+  gap:24px;
+  align-items:flex-start;
+  justify-content:center;
+  margin-top:12px;
+  flex-direction:row;
 }
-
-/* Left (form) takes remaining space */
-.form-image-row .form-side{
-  flex: 2 31 80%;
-  min-width: 160px;      /* don't shrink too small */
+.form-side{
+  flex:0 0 50%;
+  min-width:160px;
+  gap: 12px;
 }
-
-/* Right (image) fixed but limited width and prevents overflow */
-.form-image-row .image-side{
-  flex: 0 0 260px;       /* fixed width column: adjust to 200-300px as needed */
-  max-width: 260px;
+.image-side{
+  flex:0 0 50%;
+  max-width:950px;
+  display:flex;
+  flex-direction: column;   /* 🔴 upar → niche */
+  gap: 12px;                /* dono ke beech gap */
+  align-items: stretch;
+}
+/* ---------------- Image ---------------- */
+.image-box{
+  width:95%;
+  max-width:930px;
+  height:370px;
+  border:1px dashed #cfe3ff;
+  border-radius:4px;
+  overflow:hidden;          /* ✅ fixed */
+  position:relative;
+  background:#f7fbff;
+}
+.image-box img{
+  width:90%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+/* ---------------- Headings ---------------- */
+h1{
+  font-size:25px;
+  margin:0 0 6px;
+  text-transform:uppercase;
+  color:var(--olive);
+  text-align:center;
+}
+.subtitle{
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:18px;
+  text-align:center;
+  font-style:italic;
+}
+/* ---------------- Form ---------------- */
+.form{display:flex;
+    justify-content:center;
+    align-items: baseline;
+    flex-wrap:wrap;
+    gap:18px;
+    max-width:900px;
+    margin-top:12px;
+}
+label{
+    line-height: 1.4;
+    text-align: left;
+    display:flex;
+    flex: 0 1 300px;
+    font-size:21px;
+    font-weight:700;
+    margin-bottom:4px;
+    padding: 10px;
+}
+input, select{
+    line-height: 1.6;
+    text-align:left;
+    flex: 1;
+    flex:1 1 300px;
+    flex-wrap:wrap;
+    padding:8px 10px;
+    justify-content:center;
+    align-items: baseline;  
+    font-size:20px;     
+}
+.checkbox-row{
   display: flex;
-  flex-direction: column;
+  align-items: right;
   gap: 8px;
-  align-items: center;
 }
-
-/* Right (image) fixed but limited width and prevents overflow */
-.form-image-row .image-side{
-  flex: 0 0 260px;       /* fixed width column: adjust to 200-300px as needed */
-  max-width: 260px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
+.checkbox-row label{
+  padding-top: 0;
 }
-
-/* Make image scale to fit the box and prevent overflow */
-.form-image-row .image-side .image-box img{
-  width: 100%;
-  height: auto;
-  object-fit: cover;     /* crop if necessary while keeping aspect */
-  display: block;
+.controls{
+  display:flex;
+  gap:28px;
+  margin-top:10px;
+  align-items:center;
+  flex-wrap:wrap;
 }
-
-/* mobile: stack vertically (form above image) for small screens */
-/* If screen is small — stack vertically */
-@media (max-width: 820px){
+.btn{
+  background:var(--navy);
+  color:#fff;
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-size:30px;
+}
+.btn.secondary{
+  background:var(--muted);
+  font-size:20px;
+}
+/* ---------------- Results ---------------- */
+.results{
+  max-width:1980px;
+  margin:12px auto;   /* 🔴 YE MAIN LINE HAI */
+  border-radius:8px;
+  padding:10px;
+  background:#ede0e0;
+  border:1px solid #b9c4d4;
+  overflow:hidden;
+  position:relative;
+  font-size:24px;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:12px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  overflow:hidden;
+  position:relative;
+  font-size:24px;
+}
+th, td{
+  padding:8px;
+  border-bottom:1px solid #eef4ff;
+  text-align:left;
+}
+/* ---------------- Scroll Area ---------------- */
+.factor-wrap{
+  max-height:200px;
+  overflow:auto;
+  border:1px solid #eef4ff;
+  padding:8px;
+  border-radius:6px;
+  background:#fff;
+}
+.red-arrow{
+  color:red;
+  font-size:18px;
+  margin-left:6px;
+  vertical-align:middle;
+}
+.footer-note{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:12px;
+  max-width:980px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
+/* ---------------- Mobile ---------------- */
+@media (max-width:820px){
   .form-image-row{
-    flex-direction: column;
-    gap: 12px;
+    flex-direction:column;
+    gap:12px;    
   }
   .form-image-row .image-side{
-    flex: 0 0 auto;
-    max-width: 100%;
-    width: 100%;
+    max-width:100%;
+    width:100%;
   }
-  .form-image-row .image-side .image-box{
-    max-height: 360px;
+  .image-box{
+    height:160px;
   }
 }
-/* === Grand Total Row Styling === */
-#resultTable tr:last-child th {
-  background-color: #f9f9f9;     /* light grey background */
-  font-weight: bold;             /* bold text */
-  color: #222;                   /* darker text */
-  border-top: 2px solid #333;    /* clear separation line */
-  text-align: right;             /* align amount nicely */
-  padding: 8px;
+/* -------- Grand Total Row -------- */
+#resultTable tr:last-child th{
+  background-color:#f9f9f9;
+  font-weight:bold;
+  color:#222;
+  border-top:2px solid #333;
+  text-align:right;
+  padding:8px;
 }
-
-/* Optional: Add slight shadow or highlight effect */
-#resultTable tr:last-child {
-  box-shadow: inset 0 1px 0 #ddd;
+#resultTable tr:last-child{
+  box-shadow:inset 0 1px 0 #ddd;
 }
-
-/* ✅ If you want the Grand Total to stay visible even when scrolling */
-#resultTable tfoot th {
-  position: sticky;
-  bottom: 0;
-  background: #fff;
-  z-index: 2;
+#resultTable tfoot th{
+  position:sticky;
+  bottom:0;
+  background:#fff;
+  z-index:2;
 }

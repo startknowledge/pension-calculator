@@ -93,71 +93,88 @@
     </nav>
     <h1>FITMENT FACTOR FOR 7TH CPC : 2025</h1>
     <p class="subtitle">Auth: GoI, MoD (DESW) letter No 17(02)/2016-D(Pen/Pol) Dated 04 Sep 2017</p>
-    <!-- TOP Ad -->
-    <div id="topAd" class="ad-slot ad-top"></div>
+    
   </header>
   <main class="container">
     <!-- BEGIN: form + image row (form left, image right) -->
-<div class="form-image-row">
-  <!-- LEFT: Form (flex:1) -->
-  <div class="form-side">
-    <form id="pensionForm" class="form" onsubmit="return false;">
-      <label>Date of Birth (dd/mm/yyyy)</label>
-      <input id="dob" type="date" />
-      <label>Date of Enrolment</label>
-      <input id="doe" type="date" />
-      <label>Date of Retirement</label>
-      <input id="dor" type="date" />
-      <label>Rank</label>
-      <select id="rank">
-        <option>Sep</option><option>LNk</option><option>Nk</option><option>Hav</option>
-        <option>Nb Sub</option><option>Sub</option><option>Sub Maj</option><option>Hony Lt</option>
-        <option>Hony Capt</option><option>Lt</option><option>Capt</option><option>Maj</option>
-        <option>Lt Col</option><option>Col</option><option>Brig</option><option>Maj Gen</option>
-        <option>Lt Gen</option><option>Gen</option>
-      </select>
-      <label>Service Years (completed)</label>
-      <input id="serviceYears" type="number" min="0" />
-      <label>Last Basic Pay (₹)</label>
-      <input id="basicPay" type="number" step="0.01" value="0" />
-      <label>MS Pay (₹)</label>
-      <input id="msPay" type="number" step="0.01" value="0" />
-      <label>Class Pay (₹)</label>
-      <input id="classPay" type="number" step="0.01" value="0" />
-      <label>X-GP Pay (₹) (If applicable)</label>
-      <input id="xgp" type="number" step="0.01" value="0" />
-      <label>Dearness Allowance (%)</label>
-      <input id="daPerc" type="number" step="0.01" value="0" />
-      <label>Computation (check for commutation)</label>
-      <input id="computation" type="checkbox" style="transform: scale(2.5); accent-color: green;"/>
-      <label>Leave Encashment - Number of days</label>
-      <input id="leaveDays" type="number" value="0" />
-      <label>Last APFF Fund (₹)</label>
-      <input id="lastApff" type="number" value="0" />
-      <label>Commutation Rate (%)</label>
-      <input id="commuteRate" type="number" value="50" min="20" max="50" />
-      <div class="note-row">
-        <div class="note-left">input box editable; result box not editable</div>
-        <div class="note-right">AGI fixed:₹6,00,000 to ₹12,00,000 | ECHS (JCO/OR): ₹30,000</div>
+    <div class="form-image-row">
+      <!-- LEFT: Form (flex:1) -->
+      <div class="form-side">
+        <form id="pensionForm" class="form" onsubmit="return false;">
+          <label>Date of Birth (dd/mm/yyyy)</label>
+          <input id="dob" type="date" />
+          <label>Date of Enrolment</label>
+          <input id="doe" type="date" />
+          <label>Date of Retirement</label>
+          <input id="dor" type="date" />
+          <label>Rank</label>
+          <select id="rank">
+            <option>Sepoy</option><option>Lance Naik</option><option>Naik</option><option>Havildar</option>
+            <option>Nb Sub</option><option>Sub</option><option>Sub Maj</option><option>Hony Lt</option>
+            <option>Hony Capt</option><option>Lt</option><option>Capt</option><option>Maj</option>
+            <option>Lt Col</option><option>Col</option><option>Brig</option><option>Maj Gen</option>
+            <option>Lt Gen</option><option>Gen</option>
+          </select>
+          <label>Service Years (completed)</label>
+          <input id="serviceYears" type="number" min="0" />
+          <label>Last Basic Pay (₹)</label>
+          <input id="basicPay" type="number" step="0.01" value="0" />
+          <label>MS Pay (₹)</label>
+          <input id="msPay" type="number" step="0.01" value="0" />
+          <label>Class Pay (₹)</label>
+          <input id="classPay" type="number" step="0.01" value="0" />
+          <label>X-GP Pay (₹) (If applicable)</label>
+          <input id="xgp" type="number" step="0.01" value="0" />
+          <label>Dearness Allowance (%)</label>
+          <input id="daPerc" type="number" step="0.01" value="0" />
+          <label>Computation (check for commutation)</label>
+          <input id="computation" type="checkbox" style="transform: scale(2.5); accent-color: green;"/> 
+          <label>Leave Encashment - Number of days</label>
+          <input id="leaveDays" type="number" value="0" />
+          <label>Last APFF Fund (₹)</label>
+          <input id="lastApff" type="number" value="0" />
+          <label>Commutation Rate (%)</label>
+          <input id="commuteRate" type="number" value="50" min="20" max="50" />
+          <div class="note-row">
+            <div class="note-left">input box editable; result box not editable</div>
+            <div class="note-right">AGI fixed:₹6,00,000 to ₹12,00,000 | ECHS (JCO/OR): ₹30,000</div>
+          </div>
+          <div class="controls">
+            <button id="calculateBtn" class="btn">Calculate</button>
+            <button id="resetBtn" class="btn secondary">Reset</button>
+          </div>
+        </form>
       </div>
-      <div class="controls">
-        <button id="calculateBtn" class="btn">Calculate</button>
-        <button id="resetBtn" class="btn secondary">Reset</button>
+      <!-- RIGHT: Image (fixed width) -->
+      <div class="image-side">
+    <div class="image-box"><img id="previewImg" src="img/army-placeholder.png" alt="Army image" /></div>   
+    <div><section class="content">  
+    <h3>How Army Pension Is Calculated in India (2025)</h3>
+    <p>The Indian Army pension system for JCOs, ORs and Officers is governed by
+    the Ministry of Defence (MoD) and implemented through PCDA (Pensions).
+    Pension is calculated based on last drawn emoluments, qualifying service,
+    and applicable Pay Commission rules.</p>
+    <h3>Key Components of Pension Calculation</h3>
+    <ul>
+        <li>Qualifying service (minimum 20 years for full pension)</li>
+        <li>Last basic pay + MSP (where applicable)</li>
+        <li>Dearness Allowance (DA)</li>
+        <li>Commutation of pension</li>
+    </ul>
+    <h3>Official Sources</h3>
+    <p>Data used in this calculator is based on publicly available documents from:</p>
+    <ul>
+        <li>Ministry of Defence (MoD)</li>
+        <li>PCDA (Pensions)</li>
+        <li>7th Central Pay Commission</li>
+    </ul>
+<p>This tool provides an estimate only and does not replace official PPOs.</p>
+    </section>    
+  </div>
       </div>
-    </form>
-  </div>
-  <!-- RIGHT: Image (fixed width) -->
-  <div class="image-side">
-    <div class="image-box"><img id="previewImg" src="img/army-placeholder.png" alt="Army image" /></div>
-    <small class="small">Place images in the <code>/img</code> folder to change preview (FTP or GitHub upload).</small>
-  </div>
-</div>
-<!-- END: form + image row -->
-      <!-- Bottom Ads -->
-    <div class="ad-row">
-    <div id="leftAd" class="ad-slot">Left Bottom Ad placeholder</div>
-    <div id="rightAd" class="ad-slot">Right Bottom Ad placeholder</div>
     </div>
+  </main>
+    <!-- END: form + image row --> 
     <section id="resultBlock" class="results" style="display:none">
       <h2>Summary (Estimate) <span id="redArrow" class="red-arrow" style="display:none">📩</span></h2>
       <table id="resultTable">
@@ -171,75 +188,17 @@
       <th id="grandTotal">₹0</th>
     </tr>
   </tfoot>
-</table>
-
-      <h3>Commutation factors (age next): active age -> <span id="ageNextHighlighted" class="highlight">-</span></h3>
-      <div class="factor-wrap"><table id="factorTable"><thead><tr><th>Age next</th><th>Value</th></tr></thead><tbody></tbody></table></div>
-      <div class="jobs">
-        <label>Show State Jobs:</label>
-        <select id="stateSelect">
-          <option value="">Select state</option>
-          <option>Andhra Pradesh</option>
-<option>Arunachal Pradesh</option>
-<option>Assam</option>
-<option>Bihar</option>
-<option>Chandigarh</option>
-<option>Chhattisgarh</option>
-<option>Dadra and Nagar Haveli</option>
-<option>Daman and Diu</option>
-<option>Delhi</option>
-<option>Goa</option>
-<option>Gujarat</option>
-<option>Haryana</option>
-<option>Himachal Pradesh</option>
-<option>Jammu and Kashmir</option>
-<option>Jharkhand</option>
-<option>Karnataka</option>
-<option>Kerala</option>
-<option>Lakshadweep</option>
-<option>Madhya Pradesh</option>
-<option>Maharashtra</option>
-<option>Manipur</option>
-<option>Meghalaya</option>
-<option>Mizoram</option>
-<option>Nagaland</option>
-<option>Odisha</option>
-<option>Puducherry</option>
-<option>Punjab</option>
-<option>Rajasthan</option>
-<option>Sikkim</option>
-<option>Tamil Nadu</option>
-<option>Telangana</option>
-<option>Tripura</option>
-<option>Uttar Pradesh</option>
-<option>Uttarakhand</option>
-<option>West Bengal</option>
-        </select>
-        <button id="openJobs" class="btn secondary">Open Jobs</button>
-      </div>
+      </table>
     </section>
-  </main>
-  <footer class="footer-note">
-    For true protection keep logic server-side.
-    Jobs After Retirement: <a href="https://www.freejobalert.com/state-government-jobs/" target="_blank">FreeJobAlert</a>
-    <ins class="adsbygoogle"
-     style="display:block;margin-top:20px;"
-     data-ad-client="ca-pub-2162324894765763"
-     data-ad-slot="3958418735"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <p class="disclaimer">Disclaimer: This calculator is for educational and estimation purposes only.
+It is not an official Government of India website and does not issue PPOs
+or pension orders. Users should verify figures with PCDA (Pensions).</p>
 
-  </footer>
-  <div id="popupAd" class="popup-ad" style="display:none">
-    <div class="popup-inner">
-      <div style="display:flex;justify-content:space-between"><strong>Sponsored</strong><button id="closePopup">✕</button></div>
-      <div style="margin-top:8px">Ad placeholder - replace with AdSense interstitial when allowed.</div>
-    </div>
-  </div>
+    <h3>Commutation factors (age next): active age -> <span id="ageNextHighlighted" class="highlight">-</span></h3>
+    <div class="factor-wrap"><table id="factorTable"><thead><tr><th>Age next</th><th>Value</th></tr></thead><tbody></tbody></table></div>
   <script src="js/commutation_table.js"></script>
   <script src="js/app.js"></script>
-  <script src="js/security.js"></script>
-  <script src="js/ads.js"></script>
+  <script src="js/ssecurity.js"></script>
+  
 </body>
 </html>
