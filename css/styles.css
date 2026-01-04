@@ -6,7 +6,7 @@
   --muted:#6b7280;
   --bg:#f7fbff;
   --card:#ffffff;
-  font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+  font-family:Inter, system-ui, Segoe UI, Roboto, Arial;
 }
 body{
   margin:0;
@@ -22,8 +22,8 @@ body{
   max-height:100%;
   margin:0 auto;
   padding:12px;
-  background:var(--navy);
-  color:#fff;
+  background:var(--bg);
+  color:#c76666;
   text-align:center;
   font-size:22px;
   font-weight:600;
@@ -32,8 +32,8 @@ body{
 }
 /* ---------------- Container ---------------- */
 .container{    
-  display: flex;
-  flex-direction: column;
+  display:flex;
+  flex-direction:column;
   max-width:100%;   /* /* ya 1300px */ */
   margin:20px auto;
   padding:20px;
@@ -59,9 +59,9 @@ body{
   flex:0 0 50%;
   max-width:950px;
   display:flex;
-  flex-direction: column;   /* 🔴 upar → niche */
-  gap: 12px;                /* dono ke beech gap */
-  align-items: stretch;
+  flex-direction:column;   /* 🔴 upar → niche */
+  gap:12px;                /* dono ke beech gap */
+  align-items:stretch;
 }
 /* ---------------- Image ---------------- */
 .image-box{
@@ -95,42 +95,44 @@ h1{
   font-style:italic;
 }
 /* ---------------- Form ---------------- */
-.form{display:flex;
-    justify-content:center;
-    align-items: baseline;
-    flex-wrap:wrap;
-    gap:18px;
-    max-width:900px;
-    margin-top:12px;
+.form{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:row;
+  flex-wrap:wrap;
+  gap:18px;
+  max-width:900px;
+  margin-top:12px;
 }
 label{
-    line-height: 1.4;
-    text-align: left;
-    display:flex;
-    flex: 0 1 300px;
-    font-size:21px;
-    font-weight:700;
-    margin-bottom:4px;
-    padding: 10px;
+  line-height:1.4;
+  text-align:left;
+  display:flex;
+  flex:0 0 280px;
+  font-size:21px;
+  font-weight:700;
+  margin-bottom:4px;
+  padding: 10px;
 }
 input, select{
-    line-height: 1.6;
-    text-align:left;
-    flex: 1;
-    flex:1 1 300px;
-    flex-wrap:wrap;
-    padding:8px 10px;
-    justify-content:center;
-    align-items: baseline;  
-    font-size:20px;     
+  line-height:1.6;
+  text-align:left;
+  flex:1;
+  flex:1 1 300px;
+  flex-wrap:wrap;
+  padding:8px 10px;
+  justify-content:center;
+  align-items:baseline;  
+  font-size:20px;     
 }
 .checkbox-row{
-  display: flex;
-  align-items: right;
-  gap: 8px;
+  display:flex;
+  align-items:right;
+  gap:8px;
 }
 .checkbox-row label{
-  padding-top: 0;
+  padding-top:0px;
 }
 .controls{
   display:flex;
@@ -181,7 +183,7 @@ th, td{
 /* ---------------- Scroll Area ---------------- */
 .factor-wrap{
   width:100%;
-  overflow:auto ;  
+  overflow:auto;  
   max-width:1980px;
   max-height:200px;  
   background:#ede0e0;
@@ -190,7 +192,7 @@ th, td{
   border-radius:6px;
   background:#fff;
   position:relative;
-  justify-content: center;
+  justify-content:center;
 }
 .red-arrow{
   color:red;
@@ -200,59 +202,67 @@ th, td{
 }
 /* ---------------- Mobile ---------------- */
 @media (max-width:768px){
+  body{
+    font-size:14px;
+  }
+  /* Layout */
   .form-image-row{
     flex-direction:column;
-    gap:12px;    
+    gap:14px;
   }
-  body{
-    font-size:15px;
-  }
-  h1{
-    font-size:20px;
-  }
-  .container{
-    padding:10px;
-  }
-  .form-image-row{
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .form-side, .image-side{
-    flex:1 1 100%;
+  .form-side,
+  .image-side{
+    width:100%;
     max-width:100%;
   }
+  /* FORM */
   .form{
-    max-width: 100%;
+    flex-direction:column;
+    align-items:stretch;
     gap:10px;
   }
-  label, input, select{
-    flex:1 1 100%;
-    font-size:15px;
-    padding:6px;
+  .form > *{
+    width:100%;
   }
-  .image-box{
-    height:160px;
-  }
-  /* BUTTONS */
-  .btn{
-    font-size:16px;
-    padding:10px 14px;
-  }
-  .btn.secondary{
+  label{
+    flex:none;
     font-size:14px;
+    padding:4px 0;
+  }
+  input, select{
+    flex:none;
+    width:100%;
+    font-size:14px;
+    padding:8px;
+  }
+  /* CHECKBOX */
+  .checkbox-row{
+    align-items:center;
   }
   /* IMAGE */
   .image-box{
-    width:100%;
     height:180px;
+  }
+  .image-box img{
+    object-fit:contain;
+  }
+  /* BUTTONS */
+  .controls{
+    justify-content:space-between;
+  }
+  .btn{
+    font-size:14px;
+    padding:10px 12px;
+  }
+  .btn.secondary{
+    font-size:13px;
   }
   /* RESULTS */
   .results{
-    font-size:15px;
-    padding:10px;
+    font-size:14px;
   }
   table{
-    font-size:14px;
+    font-size:13px;
     display:block;
     overflow-x:auto;
     white-space:nowrap;
