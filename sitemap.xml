@@ -4,13 +4,38 @@
 
   <url>
     <loc>https://pencalculator.startknowledge.in/</loc>
-    <lastmod>2025-10-31</lastmod>
+    <lastmod>2026-01-26</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://pencalculator.startknowledge.in/about.html</loc>
-    <lastmod>2025-10-31</lastmod>
+    <lastmod>2026-01-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pencalculator.startknowledge.in/contact.html</loc>
+    <lastmod>2026-01-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pencalculator.startknowledge.in/terms.html</loc>
+    <lastmod>2026-01-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pencalculator.startknowledge.in/privacy-policy.html</loc>
+    <lastmod>2026-01-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pencalculator.startknowledge.in/disclaimer.html</loc>
+    <lastmod>2026-01-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pencalculator.startknowledge.in/faq.html</loc>
+    <lastmod>2026-01-26</lastmod>
     <priority>0.8</priority>
   </url>
 

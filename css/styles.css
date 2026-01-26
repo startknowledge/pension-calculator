@@ -8,13 +8,28 @@
   --card:#ffffff;
   font-family:Inter, system-ui, Segoe UI, Roboto, Arial;
 }
-body{
-  margin:0;
-  padding:0;
-  background:var(--bg);
-  color:var(--olive);
-  line-height:1.6;
-  font-size:18px;
+nav {
+  background: #5e9b5e;
+  padding: 12px 0;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: left;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+nav ul li a:hover {
+  text-decoration: underline;
 }
 /* ---------------- Top Bar ---------------- */
 .topbar{
@@ -22,13 +37,30 @@ body{
   max-height:100%;
   margin:0 auto;
   padding:12px;
-  background:var(--bg);
+  background: #76c176;
   color:#c76666;
   text-align:center;
   font-size:22px;
   font-weight:600;
   text-transform:uppercase;
   letter-spacing:1.2px;
+}
+body{
+  background: #94db94;
+  margin:0;
+  padding:0;
+  color:var(--olive);
+  line-height:1.6;
+  font-size:18px;
+}
+h1 {
+    text-align: center;
+    color: #cdd7ec;
+}
+h2 {
+    text-align: center;
+    color: #120601;
+    text-align: left;
 }
 /* ---------------- Container ---------------- */
 .container{    
@@ -199,6 +231,13 @@ th, td{
   font-size:18px;
   margin-left:6px;
   vertical-align:middle;
+}
+.site-footer{
+  text-align:center;
+  padding:20px;
+  background:#7ec68c;
+  color:#fff;
+  margin-top:50px;
 }
 /* ---------------- Mobile ---------------- */
 @media (max-width:768px){
