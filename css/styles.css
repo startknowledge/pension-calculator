@@ -325,3 +325,54 @@ th, td{
   background:#fff;
   z-index:2;
 }
+
+/* ================================
+   STATIC PAGE FOOTER
+   ================================ */
+
+.site-footer{
+  text-align:center;
+  padding:30px 20px;
+  background:#7ec68c;
+  color:#fff;
+  margin-top:50px;
+  line-height:1.8;
+}
+
+.site-footer a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.site-footer a:hover{
+  text-decoration:underline;
+}
+
+.footer-links,
+.footer-projects,
+.footer-contact{
+  margin-top:10px;
+}
+
+.footer-projects{
+  font-size:14px;
+}
+
+.footer-contact{
+  font-size:15px;
+}
+
+@media(max-width:768px){
+  .site-footer{
+    padding:25px 12px;
+    font-size:14px;
+  }
+
+  .footer-links,
+  .footer-projects{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+  }
+}
